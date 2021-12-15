@@ -11,11 +11,12 @@ const Registration = () => {
                        placeholder="Введите адрес электронной почты" autoComplete="off"/>
 
             </div>
-            <div className="form__password-wrapper">
-                <label className="form__input-label" htmlFor="password">Пароль</label>
-                <input className="form__input-field" id="password" type="password" name="password_input"
-                       placeholder="Введите пароль"/>
-            </div>
+                <div className="form__password-wrapper">
+                    <label className="form__input-label" htmlFor="password">Пароль</label>
+                    <input className="form__input-field" id="password" type="password" name="password_input"
+                           placeholder="Введите пароль"/>
+                </div>
+            <button>Войти</button>
             </form>
     );
 };

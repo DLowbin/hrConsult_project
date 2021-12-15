@@ -14,16 +14,12 @@
 
 .center{
     position: relative;
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*transform: translate(-50%, -50%);*/
     margin: 0 auto;
     margin-top: 250px;
 
 }
 
 .card{
-    cursor: pointer;
     width: 30%;
     height: 480px;
 }
@@ -39,10 +35,6 @@
     border-radius: 20px;
 }
 
-/*.front img{*/
-/*    height: 100%;*/
-/*}*/
-
 .front{
     transform: perspective(600px) rotateY(0deg);
     background: rgba(255, 255, 255, 0.1);
@@ -52,7 +44,7 @@
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     border-radius: 20px;
-text-align: center;
+    text-align: center;
 
 }
 
@@ -82,12 +74,6 @@ span{
     font-size: 20px;
 }
 
-.fas{
-    display: block;
-    margin: 20px 0;
-    color: red;
-    font-size: 30px;
-}
 
 .card:hover > .front{
     transform: perspective(600px) rotateY(-180deg);
