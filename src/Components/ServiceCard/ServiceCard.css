@@ -1,0 +1,97 @@
+
+.serviceContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.profLogo {
+    height: 200px;
+    margin-top: 45px;
+}
+
+.center{
+    position: relative;
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    margin: 0 auto;
+    margin-top: 250px;
+
+}
+
+.card{
+    cursor: pointer;
+    width: 30%;
+    height: 480px;
+}
+
+.front,
+.back{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+    border-radius: 20px;
+}
+
+/*.front img{*/
+/*    height: 100%;*/
+/*}*/
+
+.front{
+    transform: perspective(600px) rotateY(0deg);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+text-align: center;
+
+}
+
+.back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+}
+
+.back-content{
+    width: 100%;
+    text-align: center;
+    color: seashell;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+span{
+    display: block;
+    font-size: 20px;
+}
+
+.fas{
+    display: block;
+    margin: 20px 0;
+    color: red;
+    font-size: 30px;
+}
+
+.card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}

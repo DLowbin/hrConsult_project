@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    background-image: url("../img/banner_1.jpg");
+    width: 1200px;
+    margin: 0 auto;
+}

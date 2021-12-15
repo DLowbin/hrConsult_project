@@ -1,0 +1,87 @@
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 600px;
+    height: 412px;
+    color: #787878;
+    padding: 24px 48px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.form a {
+    color: #787878;
+}
+
+.form__title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    color: #787878;
+    margin: 0;
+    text-align: center;
+}
+
+.form__input-label {
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.form__input-field {
+    width: 100%;
+    height: 48px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: #FFFFFF;
+    border: 2px solid #787878;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 28px;
+    color: #787878;
+    outline: none;
+}
+
+.warning {
+    border-color: #CB2424;
+    color: #CB2424;
+}
+
+.form__email-wrapper::before {
+    content: '*';
+    position: relative;
+    left: -12px;
+    top: 40px;
+}
+
+.form__password-wrapper::before {
+    content: '*';
+    position: relative;
+    left: -12px;
+    top: 40px;
+}
+
+.form__submit-warning {
+    display: block;
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: #CB2424;
+    margin-left: 8px;
+}
