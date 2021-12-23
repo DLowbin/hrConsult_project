@@ -1,11 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&family=Nunito:wght@400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .App {
     background-image: url("../img/banner_1.jpg");
-    width: 1200px;
+    background-size: cover;
     margin: 0 auto;
+    min-height: 100vh; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 100vw;
 }

@@ -10,24 +10,24 @@
 .profLogo {
     height: 200px;
     margin-top: 45px;
+    margin-bottom: 45px;
 }
 
-.center{
+.center {
     position: relative;
-    margin: 0 auto;
-    margin-top: 250px;
-
+    /* margin: 0 auto; */
 }
 
-.card{
-    width: 30%;
-    height: 480px;
+.card {
+    width: 35%;
+    min-height: 500px;
+    transition: 1s;
 }
 
 .front,
-.back{
+.back {
     width: 100%;
-    height: 100%;
+    min-height: 450px;
     overflow: hidden;
     backface-visibility: hidden;
     position: absolute;
@@ -35,7 +35,7 @@
     border-radius: 20px;
 }
 
-.front{
+.front {
     transform: perspective(600px) rotateY(0deg);
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
@@ -44,11 +44,10 @@
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     border-radius: 20px;
-    text-align: center;
-
+    /* text-align: center; */
 }
 
-.back{
+.back {
     transform: perspective(600px) rotateY(180deg);
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
@@ -57,27 +56,48 @@
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     border-radius: 20px;
+    padding: 0;
 }
 
-.back-content{
+.back-content {
     width: 100%;
     text-align: center;
     color: seashell;
+    padding: 32px;
 }
 
-h2{
+h2 {
     margin-bottom: 20px;
 }
 
-span{
+span {
     display: block;
     font-size: 20px;
 }
 
-
-.card:hover > .front{
+.card:hover > .front {
     transform: perspective(600px) rotateY(-180deg);
 }
-.card:hover > .back{
+.card:hover > .back {
     transform: perspective(600px) rotateY(0deg);
+}
+
+/*.card:hover {*/
+/*    height: 600px;*/
+/*    transition: 1s;*/
+/*}*/
+
+
+.serviceDescription {
+    display: block;
+    text-decoration: none;
+    list-style-type: disc;
+    color: black;
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.buyButton {
+    width: 80%;
 }

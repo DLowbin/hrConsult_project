@@ -1,46 +1,71 @@
 import './ServiceCard.css';
-import Logo from './profession.png';
 import React from "react";
+import database from "../Database/Database";
+import {useContext, useState} from "react";
+import {AuthContext} from "../../App";
+import Link from "react-router-dom/es/Link";
 
-
-const database =[
-    'Service 1',
-    'Service 2',
-    'Service 3',
-    'Service 4',
-    'Service 5',
-    'Service 6',
-    'Service 7',
-    'Service 8',
-    'Service 9'
-]
 
 function CardPiece(props) {
+
+    const {isAuth, modalActivate} = useContext(AuthContext)
+
     return (
             <div className="card center">
                 <div className="front">
-                    <img className={"profLogo"} src={Logo} />
+                    <img className={"profLogo"} src ={props.logo} alt=" "/>
+                    <h1>{props.title}</h1>
                 </div>
                 <div className="back">
                     <div className="back-content center">
                         <h2>{props.title}</h2>
-                        <span>Content</span>
-                        <span>Price</span>
+                        <span>В пакет входит:</span>
+                        <ul className='serviceDescription'>
+                            {props.content.map((cardDescription) => {
+                                return(
+                                    <li>
+                                        {cardDescription}
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                        <span>По итогам Вы получаете:</span>
+                            <ul className='serviceDescription'>
+                                {props.result.map((cardDescription) => {
+                                    return(
+                                        <li>
+                                            {cardDescription}
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        <span>Стоимость пакета: {props.price}</span>
+                        {isAuth && <button className='buyButton' onClick={() => modalActivate(true)}>Приобрести</button>}
+                        {!isAuth && <Link to="/registration"><button>Зарегистрируйтесь для приобретения пакета</button></Link>}
                     </div>
                 </div>
             </div>
     );
 }
+
 function ServiceCard () {
     return (
-    <div className="serviceContainer">
-        {database.map((cardElement) => {
-            return (<CardPiece title={cardElement}/>)
-        })}
-
-    </div>
+        <div className="serviceContainer">
+            {database.map((serviceName) => {
+                return (
+                    <CardPiece key={serviceName.id}
+                        title={serviceName.title}
+                        description={serviceName.description}
+                        logo={serviceName.logo}
+                        price={serviceName.price}
+                        content={serviceName.content}
+                        result={serviceName.result}
+                    />
+                )
+            })}
+        </div>
     );
-}
 
+}
 
 export default ServiceCard;

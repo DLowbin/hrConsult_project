@@ -1,8 +1,9 @@
 import React from 'react';
 import './About.css';
-let AboutArticle = () => {
+const About = () => {
     return (
-        <div className="aboutArticle">
+        <div className="Article">
+            <h1>ОБО МНЕ</h1>
             <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, amet animi autem consectetur dicta,
                 dignissimos doloremque ea eaque error eum harum molestiae nam placeat quam quas reprehenderit saepe
                 totam ut.
@@ -23,4 +24,4 @@ let AboutArticle = () => {
     );
 };
 
-export default AboutArticle;
+export default About;

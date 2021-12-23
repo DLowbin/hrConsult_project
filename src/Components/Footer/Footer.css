@@ -1,0 +1,30 @@
+.Footer__Container {
+
+
+    
+    
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(20px);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+}
+
+.Footer__Container ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 46px;
+    margin: 0;
+    padding: 8px;
+    padding-bottom: 0;
+}
+
+.logo {
+    height: 35px;
+    width: 35px;
+}
