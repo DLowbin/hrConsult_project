@@ -3,13 +3,10 @@ import './NavMenuStyle.css';
 import Link from "react-router-dom/Link";
 import {useContext} from "react";
 import {AuthContext} from "../App";
-import logoutLogo from '../img/logout.png'
 
 
 function NavMenu() {
-
     const {isAuth, logout} = useContext(AuthContext)
-
     return (
         <div className="header">
             <nav>

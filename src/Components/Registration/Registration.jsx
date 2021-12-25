@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import './Registration.css'
 import ClientDataBase from '../Database/ClientDataBase'
 import { AuthContext } from '../../App';
+import { useHistory } from 'react-router-dom';
 
 
 const Registration = () => {
@@ -9,8 +10,6 @@ const Registration = () => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
 
-
-   
     function formSubmit (subm) {
         subm.preventDefault();
         const getUserList = ClientDataBase;

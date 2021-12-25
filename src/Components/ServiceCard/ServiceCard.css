@@ -5,38 +5,22 @@
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
+    flex-grow: 1;
 }
 
 .profLogo {
-    height: 200px;
+    height: 100px;
     margin-top: 45px;
     margin-bottom: 45px;
 }
 
-.center {
+.service__card {
     position: relative;
-    /* margin: 0 auto; */
-}
-
-.card {
-    width: 35%;
-    min-height: 500px;
-    transition: 1s;
-}
-
-.front,
-.back {
-    width: 100%;
-    min-height: 450px;
-    overflow: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    transition: transform .6s linear;
-    border-radius: 20px;
-}
-
-.front {
-    transform: perspective(600px) rotateY(0deg);
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    width: 30%;
+    height: 620px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -44,11 +28,50 @@
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     border-radius: 20px;
-    /* text-align: center; */
+    text-align: center;
+    padding: 24px;
+    overflow: hidden;
+}
+
+.center {
+    position: relative;
+    margin: 0 auto;
+}
+
+.card {
+    width: 30%;
+    /* min-height: 250px; */
+    transition: 1s;
+}
+
+.front,
+.back {
+    width: 100%;
+    /* min-height: 250px; */
+    overflow: hidden;
+    /* backface-visibility: hidden; */
+    position: relative;
+    /* transition: transform .6s linear; */
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.front {
+    /* transform: perspective(600px) rotateY(0deg); */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    text-align: center;
+    padding: 24px;
+    height: 120px;
 }
 
 .back {
-    transform: perspective(600px) rotateY(180deg);
+    /* transform: perspective(600px) rotateY(180deg); */
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -76,11 +99,12 @@ span {
 }
 
 .card:hover > .front {
-    transform: perspective(600px) rotateY(-180deg);
+    /* transform: perspective(600px) rotateY(-180deg); */
+    height: 600px;
 }
-.card:hover > .back {
+/* .card:hover > .back {
     transform: perspective(600px) rotateY(0deg);
-}
+}  */
 
 /*.card:hover {*/
 /*    height: 600px;*/
@@ -94,10 +118,34 @@ span {
     list-style-type: disc;
     color: black;
     text-align: left;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.serviceDescription li{
+
+    text-decoration: none;
+    list-style-type: disc;
+    color: black;
+    text-align: left;
+    font-size: 10px;
 }
 
 .buyButton {
-    width: 80%;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background: none;
+    border-bottom: 2px solid #787878;
+    border-top: 2px solid #787878;
+    border-right: none;
+    border-left: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 12px;
+    color: black;
+    outline: none;
+    cursor: pointer;
 }

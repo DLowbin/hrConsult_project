@@ -25,6 +25,8 @@
     background-color: white;
     transform: scale(0.5);
     transition: 0.4s;
+    width: 50%;
+    text-align: center;
 }
 
 .modal__content.active {

@@ -1,10 +1,9 @@
 import React from "react";
 import './Modal.css';
 
-const Modal = ({active, setActive}) => {
+const Modal = ({active, setActive, children}) => {
     return (
         <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
-
             <form className={active ? "modal__content active" : "modal__content"} onClick={(e) =>e.stopPropagation()}>
                 <p>Заполните данные, и мы свяжемся с Вами</p>
                 <div className="form__email-wrapper">
@@ -19,8 +18,10 @@ const Modal = ({active, setActive}) => {
                             placeholder="Введите номер телефона"
                     />
                 </div>
-                <button className='submit__button' type='submit'>Отправить</button>
+                <button className='buyButton' type='submit'>Отправить</button>
             </form>
+
+            
         </div>
     );
 };

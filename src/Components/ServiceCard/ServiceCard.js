@@ -1,7 +1,7 @@
 import './ServiceCard.css';
 import React from "react";
 import database from "../Database/Database";
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import {AuthContext} from "../../App";
 import Link from "react-router-dom/es/Link";
 
@@ -11,14 +11,9 @@ function CardPiece(props) {
     const {isAuth, modalActivate} = useContext(AuthContext)
 
     return (
-            <div className="card center">
-                <div className="front">
+            <div className="service__card">
                     <img className={"profLogo"} src ={props.logo} alt=" "/>
-                    <h1>{props.title}</h1>
-                </div>
-                <div className="back">
-                    <div className="back-content center">
-                        <h2>{props.title}</h2>
+                    <h3>{props.title}</h3>
                         <span>В пакет входит:</span>
                         <ul className='serviceDescription'>
                             {props.content.map((cardDescription) => {
@@ -39,11 +34,9 @@ function CardPiece(props) {
                                     )
                                 })}
                             </ul>
-                        <span>Стоимость пакета: {props.price}</span>
+                        <span>Стоимость пакета:{props.price}</span>
                         {isAuth && <button className='buyButton' onClick={() => modalActivate(true)}>Приобрести</button>}
-                        {!isAuth && <Link to="/registration"><button>Зарегистрируйтесь для приобретения пакета</button></Link>}
-                    </div>
-                </div>
+                        {!isAuth && <Link to="/registration"><button className='buyButton'>Зарегистрируйтесь для приобретения пакета</button></Link>}
             </div>
     );
 }
@@ -65,7 +58,6 @@ function ServiceCard () {
             })}
         </div>
     );
-
 }
 
 export default ServiceCard;

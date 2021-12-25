@@ -1,0 +1,25 @@
+.main__wrapper {
+    color: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+    padding: 32px;
+}
+.regals {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.regals ul{
+    text-decoration: none;
+    list-style-type: none;
+    text-align: left;
+}
+
+.regals img{
+    display: inline-block;
+    height: 75px;
+    vertical-align: middle;
+    align-items: center;
+}
