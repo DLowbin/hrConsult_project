@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavMenuStyle.css';
-import Link from "react-router-dom/Link";
+import {Link} from "react-router-dom";
 import {useContext} from "react";
 import {AuthContext} from "../App";
 
@@ -9,7 +9,6 @@ function NavMenu() {
     const {isAuth, logout} = useContext(AuthContext)
     return (
         <div className="header">
-            <nav>
                 <ul className="header-nav">
                     <li><Link to={'/'}>Главная</Link></li>
                     <li><Link to={'/articles'}> Статьи</Link></li>
@@ -18,7 +17,6 @@ function NavMenu() {
                     {!isAuth && <li><Link to={'/registration'}>Войти</Link></li>}
                     {isAuth && <li onClick={logout}>Выйти</li>}
                 </ul>
-            </nav>
         </div>
     );
 }

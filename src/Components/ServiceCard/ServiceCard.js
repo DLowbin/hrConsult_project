@@ -46,7 +46,8 @@ function ServiceCard () {
         <div className="serviceContainer">
             {database.map((serviceName) => {
                 return (
-                    <CardPiece key={serviceName.id}
+                    <CardPiece 
+                        key={serviceName.id}
                         title={serviceName.title}
                         description={serviceName.description}
                         logo={serviceName.logo}

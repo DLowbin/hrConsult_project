@@ -33,84 +33,9 @@
     overflow: hidden;
 }
 
-.center {
-    position: relative;
-    margin: 0 auto;
-}
-
-.card {
-    width: 30%;
-    /* min-height: 250px; */
-    transition: 1s;
-}
-
-.front,
-.back {
-    width: 100%;
-    /* min-height: 250px; */
-    overflow: hidden;
-    /* backface-visibility: hidden; */
-    position: relative;
-    /* transition: transform .6s linear; */
-    border-radius: 20px;
-    padding: 8px;
-}
-
-.front {
-    /* transform: perspective(600px) rotateY(0deg); */
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-    text-align: center;
-    padding: 24px;
-    height: 120px;
-}
-
-.back {
-    /* transform: perspective(600px) rotateY(180deg); */
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-    padding: 0;
-}
-
-.back-content {
-    width: 100%;
-    text-align: center;
-    color: seashell;
-    padding: 32px;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
 span {
-    display: block;
     font-size: 20px;
 }
-
-.card:hover > .front {
-    /* transform: perspective(600px) rotateY(-180deg); */
-    height: 600px;
-}
-/* .card:hover > .back {
-    transform: perspective(600px) rotateY(0deg);
-}  */
-
-/*.card:hover {*/
-/*    height: 600px;*/
-/*    transition: 1s;*/
-/*}*/
-
 
 .serviceDescription {
     display: block;
@@ -142,7 +67,6 @@ span {
     border-top: 2px solid #787878;
     border-right: none;
     border-left: none;
-    box-sizing: border-box;
     border-radius: 10px;
     font-size: 12px;
     color: black;

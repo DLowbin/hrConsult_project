@@ -13,7 +13,6 @@ import { useHistory } from 'react-router-dom';
 
 export const AuthContext = createContext(null);
 
-
 function App() {
 
     const [isAuth, setIsAuth] = useState(false)

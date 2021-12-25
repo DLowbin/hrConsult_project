@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import './Articles.css'
 import Articleslist from './Articleslist';
 
@@ -7,6 +7,16 @@ function Articles() {
     const [articles, setArticles] = useState([]);
     const [artTitle, setTitle] = useState('');
     const [artBody, setBody] = useState('');
+
+    useEffect(() => {
+        const empty = localStorage.getItem('articles') || []
+        setArticles(JSON.parse(empty))
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('articles', JSON.stringify(articles))
+    }, [articles])
+
     const addArticle = (e) => {
             e.preventDefault();
             const newArticle = {
